@@ -2,7 +2,9 @@
  * Created by s3553 on 2015/10/12.
  */
 
+import org.jblas.Eigen
 import org.jblas._
+
 
 object Jblas_example {
   def main(args: Array[String]) {
@@ -36,7 +38,9 @@ object Jblas_example {
 
     //2.Matrix Arithmetic
     var c = new DoubleMatrix(3, 3, 1, 2, 3, 4, 5, 6, 7, 8, 9)
-    var x = new DoubleMatrix(3, 1, 10 ,11, 12)
+    var x = new DoubleMatrix(3, 2, 10 ,11, 12, 13, 14, 15)
+    println("c: " + c)
+    println("x: " + x)
     println("----Matrix Arithmetic")
     var y = c.mmul(x) //product of two array
     println("mmul")
@@ -44,6 +48,8 @@ object Jblas_example {
     var z = x.add(y)
     println("add")
     println(z)
+    //basic arithmetics : add(+), sub(-), mul(*), div(/)
+    //                     mmul(matrix product), dot
 
 
   }
